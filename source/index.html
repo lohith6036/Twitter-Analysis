@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0105)http://localhost:63342/FirstProject/TwitterStreamer/StreamApp/Query1.html?_ijt=dq81nr2pa01e903j427uajenkp -->
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- latest bootstrap version -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+<style>
+body{
+	font-family: 'Roboto', sans-serif;
+}
+img{
+	max-width:100%;
+	height:auto;
+	display:none;
+}
+ul li{
+	list-style-type:none;
+	line-height:2.5rem;
+	cursor:pointer;
+}
+</style>
+  <body>
+<div class="container-fluid">
+<div class="text-center"><h1 class="mx-auto mt-2">Tweet File Analysis</h1></div>
+<div class="row">
+
+  <div class="col-12 col-md-6">
+    <ul class="mt-3">
+      <li id="question1" onclick="showQuery('1')">Tweets from different sources</li>
+      <li id="question2" onclick="showQuery('2')">Republicans polarity score range</li>
+      <li id="question3" onclick="showQuery('3')">Republicans and Democratic tweets with 100% positivity</li>
+        <li id="question4" onclick="showQuery('4')">Languages with tweets count</li>
+              <li id="question5" onclick="showQuery('5')">Countries with more tweets</li>
+              <li id="question6" onclick="showQuery('6')">Polarity of tweets for Joe and Trump</li>
+              <li id="question7" onclick="showQuery('7')">Top 5 users with highest number of tweets</li>
+              <li id="question8" onclick="showQuery('8')">Users with maximum number of followers</li>
+              <li id="question9" onclick="showQuery('9')">Subjective tweets of both the parties</li>
+              <li id="question10" onclick="showQuery('10')">Top 5 states with highest number of tweets</li>
+    </ul>
+  </div>
+  <div class="col-12 col-md-6">
+  <img src="http://127.0.0.1:5000/Query/1" id="Query1">
+       <img src="http://127.0.0.1:5000/Query/2" id="Query2">
+       <img src="http://127.0.0.1:5000/Query/3" id="Query3">
+      <img src="http://127.0.0.1:5000/Query/4" id="Query4">
+       <img src="http://127.0.0.1:5000/Query/5" id="Query5">
+       <img src="http://127.0.0.1:5000/Query/6" id="Query6">
+       <img src="http://127.0.0.1:5000/Query/7" id="Query7">
+       <img src="http://127.0.0.1:5000/Query/8" id="Query8">
+       <img src="http://127.0.0.1:5000/Query/9" id="Query9">
+        <img src="http://127.0.0.1:5000/Query/10" id="Query10">
+  </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+function showQuery(id) {
+  for (var i=1;i< 11;i++){
+   var elem = document.getElementById('Query'+i);
+   var e = document.getElementById('question' + i);
+  if(id==i){
+   elem.style.display = "block";
+   e.style.fontWeight = "900";
+  }else{
+   elem.style.display = "none";
+   e.style.fontWeight = "";
+  }
+  }
+}
+</script>
+
+</body></html>
